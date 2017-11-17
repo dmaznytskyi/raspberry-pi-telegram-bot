@@ -1,0 +1,10 @@
+#!/usr/bin/expect
+spawn telnet 000.000.0.0
+set timeout 10
+expect "Login: "
+send "0000\r"
+expect "Password: "
+send "0000\r"
+expect "#"
+send "/sbin/reboot\r"
+expect "#"
